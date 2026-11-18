@@ -14,6 +14,8 @@ let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
 let filtroAtual = "todas";
 
+document.querySelector('[data-filtro="todas"]').classList.add("ativo");
+
 
 formulario.addEventListener("submit", function (evento) {
     evento.preventDefault();
