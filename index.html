@@ -1,0 +1,134 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organizae - Gerenciador de Tarefas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div>
+            <h1>Organizae</h1>
+            <p>Gerenciador de tarefas</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="formulario">
+            <h2>Nova tarefa</h2>
+
+            <form id="form-tarefa">
+
+                <div class="campo">
+                    <label for="titulo">Tarefa</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Digite uma tarefa..."
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+
+                    <select id="categoria">
+                        <option value="estudo">Estudo</option>
+                        <option value="trabalho">Trabalho</option>
+                        <option value="lazer">Lazer</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Prioridade</label>
+
+                    <div class="prioridades">
+
+                        <label>
+                            <input type="radio" name="prioridade" value="alta" checked>
+                            Alta
+                        </label>
+
+                        <label>
+                            <input type="radio" name="prioridade" value="media">
+                            Média
+                        </label>
+
+                        <label>
+                            <input type="radio" name="prioridade" value="baixa">
+                            Baixa
+                        </label>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-principal">
+                    Adicionar tarefa
+                </button>
+
+            </form>
+        </section>
+
+        <section class="resumo">
+
+            <div class="contador">
+                <span>Total</span>
+                <strong id="total-tarefas">0</strong>
+            </div>
+
+            <div class="contador">
+                <span>Pendentes</span>
+                <strong id="tarefas-pendentes">0</strong>
+            </div>
+
+            <div class="contador">
+                <span>Concluídas</span>
+                <strong id="tarefas-concluidas">0</strong>
+            </div>
+
+        </section>
+
+        <section class="filtros">
+
+            <h2>Minhas tarefas</h2>
+
+            <div class="filtro-botoes">
+
+                <button type="button" class="filtro ativo" data-filtro="todas">
+                    Todas
+                </button>
+
+                <button type="button" class="filtro" data-filtro="pendentes">
+                    Pendentes
+                </button>
+
+                <button type="button" class="filtro" data-filtro="concluidas">
+                    Concluídas
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="lista-tarefas" class="lista-tarefas">
+
+            <div class="mensagem-vazia" id="mensagem-vazia">
+                <p>Nenhuma tarefa cadastrada.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
