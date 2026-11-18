@@ -118,6 +118,14 @@ function mostrarTarefas() {
 
                 <button
                     type="button"
+                    class="editar"
+                    onclick="editarTarefa(${tarefa.id})"
+                >
+                    Editar
+                </button>
+
+                <button
+                    type="button"
                     class="excluir"
                     onclick="excluirTarefa(${tarefa.id})"
                 >
@@ -163,6 +171,22 @@ function excluirTarefa(id) {
     mostrarTarefas();
 }
 
+function editarTarefa(id) {
+    const tarefa = tarefas.find(function (tarefa) {
+        return tarefa.id === id;
+    });
+
+    const novoTitulo = prompt("Edite a tarefa:", tarefa.titulo);
+
+    if (novoTitulo === null || novoTitulo.trim() === "") {
+        return;
+    }
+
+    tarefa.titulo = novoTitulo.trim();
+
+    salvarTarefas();
+    mostrarTarefas();
+}
 
 function atualizarContadores() {
 
