@@ -296,3 +296,10 @@ button {
         flex: 1;
     }
 }
+
+@media (max-width: 600px) {
+    .topo-tarefas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
