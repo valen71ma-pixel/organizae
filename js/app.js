@@ -38,6 +38,7 @@ formulario.addEventListener("submit", function (evento) {
 
     salvarTarefas();
     formulario.reset();
+    tituloInput.focus();
 
     document.querySelector(
         'input[name="prioridade"][value="alta"]'
